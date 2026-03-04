@@ -3,7 +3,7 @@ import { ArtView } from "./components/ArtView";
 import { InfoView } from "./components/InfoView";
 import { PhoneFrame } from "./components/PhoneFrame";
 import { galleryData } from "./data/galleryData";
-import type { GalleryItem } from "./types/gallery";
+
 
 export default function App() {
   const [isLoaded, setIsLoaded] = useState(false);
