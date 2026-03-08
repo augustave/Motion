@@ -4,7 +4,7 @@ import { shelfData } from '../data/shelfData';
 // Constants
 const MAX_OPEN = -220;
 
-export default function SlipcaseShelf() {
+export default function SlipcaseShelf({ isActive = true }: { isActive?: boolean }) {
     const worldCameraRef = useRef<HTMLDivElement>(null);
     const [activeBookId, setActiveBookId] = useState<string | null>(null);
     const [currentSlide, setCurrentSlide] = useState(0);
@@ -125,6 +125,7 @@ export default function SlipcaseShelf() {
 
     // --- Event Handlers ---
     const handleWheel = (e: WheelEvent) => {
+        if (!isActive) return;
         if (!activeBookRef.current || !activeBookRef.current.classList.contains('is-active')) return;
         e.preventDefault();
 
@@ -156,6 +157,7 @@ export default function SlipcaseShelf() {
     };
 
     const handleDragStart = (e: MouseEvent | TouchEvent) => {
+        if (!isActive) return;
         // Only allow left click or touch
         if (e.type === 'mousedown' && (e as MouseEvent).button !== 0) return;
         if (!activeBookRef.current) return;
@@ -174,7 +176,7 @@ export default function SlipcaseShelf() {
     };
 
     const handleDragMove = (e: MouseEvent | TouchEvent) => {
-        if (!isDragging || !activeBookRef.current) return;
+        if (!isActive || !isDragging || !activeBookRef.current) return;
         // Prevent default to stop scrolling on mobile
         if (e.cancelable) e.preventDefault();
 
@@ -224,6 +226,7 @@ export default function SlipcaseShelf() {
     };
 
     const handleMouseMove = (e: MouseEvent) => {
+        if (!isActive) return;
         if (activeBookRef.current && activeBookRef.current.classList.contains('is-active') && !isDragging) {
             const cx = window.innerWidth / 2;
             const cy = window.innerHeight / 2;
@@ -235,7 +238,7 @@ export default function SlipcaseShelf() {
     };
 
     const handleDragEnd = () => {
-        if (!isDragging || !activeBookRef.current) return;
+        if (!isActive || !isDragging || !activeBookRef.current) return;
         
         setIsDragging(false);
         activeBookRef.current.classList.remove('is-dragging');

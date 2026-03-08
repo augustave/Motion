@@ -11,17 +11,9 @@ export const portfolioData: PortfolioItem[] = [
     technologies: ["React", "Typescript", "LLMs", "Waveform Analysis"],
   },
   {
-    id: "project-2",
-    projectTitle: "3 Books Archive",
-    customLeftComponent: "SlipcaseShelf",
-    descriptionTitle: "Interactive 3D Bookshelf",
-    descriptionText: "A fully interactive 3D bookshelf experience allowing users to pull out and examine specific slipcase books. The physics-based animations provide a mechanical, tactile feel to exploring archival material.",
-    technologies: ["React", "CSS 3D Transformers", "SVG Filters", "Web Audio API"],
-  },
-  {
     id: "project-3",
     projectTitle: "NeoFinance App",
-    leftImageSrc: "/images/left-art.jpg", // We can reuse the placeholder for now or let the user add real ones
+    leftImageSrc: "/images/left-art.jpg", 
     leftImageAlt: "NeoFinance Dashboard",
     descriptionTitle: "Real-time Crypto Wallet",
     descriptionText: "A conceptual neo-banking application allowing users to trade digital assets seamlessly. Features include real-time price updates via WebSockets, a sleek dark mode interface, and biometric authentication for secure transactions.",

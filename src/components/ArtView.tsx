@@ -1,21 +1,14 @@
 import type { PortfolioItem } from "../types/gallery";
-import SlipcaseShelf from "./SlipcaseShelf";
 
 export function ArtView({ data }: { data: PortfolioItem }) {
   return (
     <div className="relative flex flex-col h-full bg-zinc-950 overflow-hidden">
       <div className="absolute inset-0 w-full h-full flex items-center justify-center">
-        {data.customLeftComponent === "SlipcaseShelf" ? (
-          <div className="scale-[0.6] w-[1400px] h-[1000px] origin-center flex items-center justify-center pointer-events-auto bg-black">
-            <SlipcaseShelf />
-          </div>
-        ) : (
-          <img
-            src={data.leftImageSrc}
-            alt={data.leftImageAlt}
-            className="w-full h-full object-cover"
-          />
-        )}
+        <img
+          src={data.leftImageSrc}
+          alt={data.leftImageAlt}
+          className="w-full h-full object-cover"
+        />
       </div>
       
       {/* Content over glass */}
