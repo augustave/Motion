@@ -19,22 +19,22 @@ export function PhoneFrame({
     <div className="relative">
       {side === "left" && (
         <div
-          className="absolute top-[200px] -right-[5px] w-[5px] h-[80px] bg-gradient-to-r from-neutral-600 to-neutral-800 rounded-r-lg shadow-md"
+          className="absolute top-[160px] -right-[5px] w-[5px] h-[80px] bg-gradient-to-r from-neutral-600 to-neutral-800 rounded-r-lg shadow-md"
           style={{ transform: "translateZ(-1px)" }}
         />
       )}
       {side === "right" && (
         <>
           <div
-            className="absolute top-[120px] -left-[5px] w-[5px] h-[30px] bg-gradient-to-l from-neutral-600 to-neutral-800 rounded-l-lg shadow-md"
+            className="absolute top-[100px] -left-[5px] w-[5px] h-[30px] bg-gradient-to-l from-neutral-600 to-neutral-800 rounded-l-lg shadow-md"
             style={{ transform: "translateZ(-1px)" }}
           />
           <div
-            className="absolute top-[180px] -left-[5px] w-[5px] h-[65px] bg-gradient-to-l from-neutral-600 to-neutral-800 rounded-l-lg shadow-md"
+            className="absolute top-[150px] -left-[5px] w-[5px] h-[65px] bg-gradient-to-l from-neutral-600 to-neutral-800 rounded-l-lg shadow-md"
             style={{ transform: "translateZ(-1px)" }}
           />
           <div
-            className="absolute top-[260px] -left-[5px] w-[5px] h-[65px] bg-gradient-to-l from-neutral-600 to-neutral-800 rounded-l-lg shadow-md"
+            className="absolute top-[230px] -left-[5px] w-[5px] h-[65px] bg-gradient-to-l from-neutral-600 to-neutral-800 rounded-l-lg shadow-md"
             style={{ transform: "translateZ(-1px)" }}
           />
         </>
@@ -48,7 +48,7 @@ export function PhoneFrame({
         }`}
       >
         <div className="p-[10px] rounded-[3.3rem] bg-black">
-          <div className="relative w-[390px] h-[844px] bg-white rounded-[2.8rem] overflow-hidden flex flex-col">
+          <div className="relative w-[360px] h-[720px] bg-white rounded-[2.8rem] overflow-hidden flex flex-col">
             <div className="flex justify-between items-center px-6 pt-4 pb-2 text-black text-xs font-semibold z-20">
               <span>11:32</span>
               <div className="absolute top-2 left-1/2 -translate-x-1/2 w-32 h-8 bg-black rounded-full" />

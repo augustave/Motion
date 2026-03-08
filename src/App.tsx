@@ -133,7 +133,7 @@ export default function App() {
                 pointerEvents,
               }}
             >
-              <div className={`scale-[0.65] sm:scale-75 md:scale-90 xl:scale-100 -mt-24 xl:-mt-12 transition-all duration-1000`}>
+              <div className={`scale-[0.55] sm:scale-[0.65] md:scale-75 lg:scale-90 xl:scale-95 -mt-16 xl:-mt-8 transition-all duration-1000`}>
                 <div style={getLeftPhoneStyle(isActive)} className="relative">
                   <PhoneFrame side="left">
                     <ArtView data={item} />
@@ -141,7 +141,7 @@ export default function App() {
                 </div>
               </div>
 
-              <div className={`scale-[0.65] sm:scale-75 md:scale-90 xl:scale-100 -mt-32 xl:mt-12 transition-all duration-1000 delay-100`}>
+              <div className={`scale-[0.55] sm:scale-[0.65] md:scale-75 lg:scale-90 xl:scale-95 -mt-24 xl:mt-8 transition-all duration-1000 delay-100`}>
                 <div style={getRightPhoneStyle(isActive)} className="relative">
                   <PhoneFrame side="right">
                     <InfoView data={item} />
